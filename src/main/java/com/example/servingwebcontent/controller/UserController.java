@@ -1,6 +1,5 @@
 package com.example.servingwebcontent.controller;
 
-import com.example.servingwebcontent.DataBase;
 import com.example.servingwebcontent.model.User;
 import com.example.servingwebcontent.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -14,17 +13,17 @@ public class UserController {
 
     @GetMapping
     @ResponseBody
-    public User findUser(@RequestParam String id) {
+    public User getUser(@RequestParam Integer id) {
 
-        User response = new User();
-        response.setName(userService.getBd(Integer.parseInt(id)));
-        return response;
+//        User response = new User();
+//        response.setName(userService.getBd(id));
+        return userService.getUser(id);
     }
 
 
     @PostMapping
-    public void create(@RequestBody User request) {
-        userService.setBd(request.getName());
-       // System.out.println(userService.toString());
+    public User create(@RequestBody User user) {
+        userService.addUser(user);
+        return user;
     }
 }

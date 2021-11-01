@@ -1,18 +1,19 @@
 package com.example.servingwebcontent.service;
 
-import com.example.servingwebcontent.DataBase;
+import com.example.servingwebcontent.UserRepository;
+import com.example.servingwebcontent.model.User;
 import org.springframework.stereotype.Service;
 
 @Service
 public class UserService {
-    private DataBase bd = new DataBase();
+    private UserRepository bd = new UserRepository();
 
-    public void setBd(String name) {
-        bd.set(name);
+    public void addUser(User user) {
+        bd.set(user);
     }
 
-    public String getBd(int index) {
-        return  bd.getMap(index);
+    public User getUser(int index) {
+        return  bd.getUser(index);
     }
 
     @Override
