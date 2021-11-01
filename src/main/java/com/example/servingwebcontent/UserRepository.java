@@ -7,10 +7,11 @@ import java.util.Map;
 
 public class UserRepository {
     private int index=0;
-    HashMap<Integer, User> map = new HashMap<>();
+    private HashMap<Integer, User> map = new HashMap<>();
 
-    public void set(User user) {
-        this.map.put(index, user);
+    public void save(User user) {
+        user.setId(index);
+        map.put(index, user);
         index++;
     }
 

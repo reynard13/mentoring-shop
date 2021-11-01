@@ -9,7 +9,8 @@ public class UserService {
     private UserRepository bd = new UserRepository();
 
     public void addUser(User user) {
-        bd.set(user);
+
+        bd.save(user);
     }
 
     public User getUser(int index) {
