@@ -1,15 +1,14 @@
-package com.example.servingwebcontent;
+package org.example.mentoringshop.repositories;
 
-import com.example.servingwebcontent.model.User;
+import org.example.mentoringshop.models.User;
 import org.springframework.stereotype.Component;
 
 import java.util.HashMap;
-import java.util.Map;
 
 @Component
 public class UserRepository {
     private int index;
-    private HashMap<Integer, User> map = new HashMap<>();
+    private HashMap<Integer, User> map;
 
     public UserRepository() {
         map = new HashMap<>();
@@ -22,12 +21,8 @@ public class UserRepository {
         index++;
     }
 
-    public User getUser(int index) {
+    public User get(int index) {
         return map.get(index);
     }
 
-    @Override
-    public String toString() {
-        return "DataBase{" + map;
-    }
 }
