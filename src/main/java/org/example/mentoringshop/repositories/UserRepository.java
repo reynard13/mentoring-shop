@@ -22,6 +22,7 @@ public class UserRepository {
     }
 
     public User get(int index) {
+        System.out.println("user map.get(index): "+map.get(index));
         return map.get(index);
     }
 

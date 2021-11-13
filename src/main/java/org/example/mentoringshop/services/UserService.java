@@ -2,7 +2,6 @@ package org.example.mentoringshop.services;
 
 import org.example.mentoringshop.repositories.UserRepository;
 import org.example.mentoringshop.models.User;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 @Service
