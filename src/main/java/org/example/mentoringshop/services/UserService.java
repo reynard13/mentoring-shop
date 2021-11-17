@@ -1,15 +1,15 @@
 package org.example.mentoringshop.services;
 
-import org.example.mentoringshop.repositories.UserRepository;
+import org.example.mentoringshop.repositories.Dao;
 import org.example.mentoringshop.models.User;
 import org.springframework.stereotype.Service;
 
 @Service
-public class UserService {
+public class UserService{
 
-    private UserRepository userRepository;
+    private Dao<User> userRepository;
 
-    public UserService(UserRepository userRepository) {
+    public UserService(Dao<User> userRepository) {
         this.userRepository = userRepository;
     }
 
