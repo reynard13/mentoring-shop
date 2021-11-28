@@ -11,10 +11,6 @@ public class UserController {
     @Autowired
     private UserService userService;
 
-    public UserController(UserService userService) {
-        this.userService = userService;
-    }
-
     @GetMapping
     public User getUser(@RequestParam Integer id) {
         return userService.getUser(id);
